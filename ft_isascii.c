@@ -6,14 +6,11 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 14:33:22 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/25 15:36:42 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/25 15:49:29 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (~(0xFFFFFF80 & c))
-		return (1);
-	else
-		return (0);
+	return (~(0xFFFFFF80 & c))
 }
