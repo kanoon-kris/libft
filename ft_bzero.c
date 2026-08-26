@@ -6,13 +6,13 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 19:45:14 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/26 20:05:54 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/26 21:05:11 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*s_copy;
 

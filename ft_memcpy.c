@@ -6,13 +6,13 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 20:05:14 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/26 20:52:55 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/26 21:06:23 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*src_copy;
 	unsigned char		*dest_copy;

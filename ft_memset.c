@@ -6,13 +6,13 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 18:23:40 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/26 20:06:50 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/26 21:06:31 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*s_copy;
 	unsigned char	c_copy;
