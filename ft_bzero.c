@@ -6,15 +6,17 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 19:45:14 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/26 19:52:03 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/26 19:54:50 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	bzero(void *s, size_t n)
 {
 	unsigned char *s_copy;
 
-	s_coppy = s;
+	s_copy = s;
 	while (n--)
 	{
 		*s_copy++ = 0;
