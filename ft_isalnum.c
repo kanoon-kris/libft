@@ -6,7 +6,7 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 14:23:56 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/25 14:29:51 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/30 14:23:06 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ static int	ft_isalpha(int c)
 
 static int	ft_isdigit(int c)
 {
-	if ((0 <= c) && (c <= 9))
+	if (('0' <= c) && (c <= '9'))
 		return (1);
 	else
 		return (0);
 }
 
-int	ft_alnum(int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
