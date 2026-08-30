@@ -6,7 +6,7 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 16:28:26 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/30 17:58:26 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/30 18:00:05 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t idx;
+	size_t	idx;
 
 	if (size == 0)
 		return (ft_strlen(src));
