@@ -6,7 +6,7 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:04:43 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/31 17:12:53 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/31 17:16:08 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ int	ft_toupper(int c)
 	c_copy = c;
 	if (('a' <= c) && (c <= 'z'))
 		return (c_copy - 32);
-	return (c);
+	else
+		return (c);
 }
