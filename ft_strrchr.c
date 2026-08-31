@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 23:18:23 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/01 00:11:27 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/01 00:42:02 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	c_copy;
-	char		*ptr_current;
-	size_t		idx;
+	char			*ptr_current;
+	size_t			idx;
 
 	idx = 0;
 	ptr_current = NULL;
