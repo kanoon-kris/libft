@@ -6,7 +6,7 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:13:35 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/31 17:15:41 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/08/31 17:16:52 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char c_copy;
+	unsigned char	c_copy;
 
 	c_copy = c;
 	if (('A' <= c_copy) && (c_copy <= 'Z'))
