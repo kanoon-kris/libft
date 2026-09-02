@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 20:13:11 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/02 20:36:21 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/02 20:38:03 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char *s1_converted;
-	const unsigned char *s2_converted;
+	const unsigned char	*s1_converted;
+	const unsigned char	*s2_converted;
 	size_t				idx;
 
 	if (n == 0)
