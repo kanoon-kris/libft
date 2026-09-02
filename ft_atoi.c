@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:46:35 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/02 23:27:01 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/03 05:14:44 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isspace(int c)
 {
-	unsigned char c_ptr;
+	unsigned char	c_ptr;
 
 	c_ptr = c;
 	if ((c_ptr == ' ') || (c_ptr == '\f') || (c_ptr == '\n')
