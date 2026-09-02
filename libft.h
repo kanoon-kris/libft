@@ -6,7 +6,7 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 16:17:48 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/31 18:28:07 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/03 04:58:44 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
