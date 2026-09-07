@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 05:15:45 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/03 05:22:17 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/08 04:01:52 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,30 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*str_pt;
 	size_t	len;
-	size_t	idx;
+	char	*str_pt;
 
-	idx = 0;
 	len = ft_strlen(s);
-	str_pt = malloc(sizeof(char) * len + 1);
+	str_pt = malloc(size(char) *len + 1);
 	if (str_pt == NULL)
 		return (NULL);
-	while (idx < len)
-	{
-		*(str_pt + idx) = *(s + idx);
-		++idx;
-	}
-	return (str_pt);
+	return (ft_memcpy(str_pt, s, len + 1));
 }
+//char	*ft_strdup(const char *s)
+//{
+//	char	*str_pt;
+//	size_t	len;
+//	size_t	idx;
+//
+//	idx = 0;
+//	len = ft_strlen(s);
+//	str_pt = malloc(sizeof(char) * len + 1);
+//	if (str_pt == NULL)
+//		return (NULL);
+//	while (idx < len)
+//	{
+//		*(str_pt + idx) = *(s + idx);
+//		++idx;
+//	}
+//	return (str_pt);
+//}
