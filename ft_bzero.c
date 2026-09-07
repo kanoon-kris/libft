@@ -6,7 +6,7 @@
 /*   By: kboonkos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 19:45:14 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/08/31 16:57:40 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/08 02:04:14 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*s_copy;
-
-	s_copy = s;
-	while (n--)
-		*s_copy++ = 0;
+//	unsigned char	*s_copy;
+//
+//	s_copy = s;
+//	while (n--)
+//		*s_copy++ = 0;
+	ft_memset(s, 0, n); 
 }
