@@ -6,13 +6,16 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 20:44:23 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/02 23:28:46 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/08 03:41:03 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
+//char	*ft_strnstr(const char *big, const char *little, size_t len)
+//{
+//}
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	idx;
@@ -24,7 +27,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	idx = 0;
 	while (idx < len)
 	{
-		printf("idx: %zu\n", idx);
 		idx_inner = 0;
 		while ((*(big + idx + idx_inner) == *(little + idx_inner))
 			&& (*(little + idx_inner) != '\0')
