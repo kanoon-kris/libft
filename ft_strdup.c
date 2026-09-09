@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 05:15:45 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/08 04:01:52 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/10 03:09:10 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	char	*str_pt;
 
 	len = ft_strlen(s);
-	str_pt = malloc(size(char) *len + 1);
+	str_pt = malloc(sizeof(char) *len + 1);
 	if (str_pt == NULL)
 		return (NULL);
 	return (ft_memcpy(str_pt, s, len + 1));
