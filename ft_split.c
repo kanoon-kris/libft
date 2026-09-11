@@ -6,63 +6,11 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 19:31:08 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/11 20:40:51 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/12 00:19:06 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-
-static size_t	count_word(char const *s, char c);
-
-//char	**ft_split(char const *s, char c)
-//{
-//	char		**res;
-//	size_t		word_count;
-//	const char	*ptr_end;
-//	const char	*ptr_begin;
-//	size_t		idx;
-//
-//	idx = 0;
-//	word_count = count_word(s, c);
-//	res = calloc(word_count + 1, sizeof(char *));
-//	ptr_begin = s;
-//	ptr_end = s;
-//	while (*(ptr_begin) != '\0')
-//	{
-//		while ((*(ptr_end) != c) && (*(ptr_end) != '\0'))
-//			++ptr_end;
-//		*(res + idx) = calloc((ptr_end - ptr_begin + 1), sizeof(char));
-//		ft_memcpy(*(res + idx), ptr_begin, ptr_end - ptr_begin);
-//		*(*(res + idx) + (ptr_end - ptr_begin)) = '\0';
-//		++idx;
-//		++ptr_end;
-//		ptr_begin = ptr_end;
-//		if (*(ptr_begin) == '\0')
-//			break ;
-//	}
-//	*(res + word_count) = NULL;
-//	return (res);
-//}
-char	**ft_split(char const *s, char c)
-{
-	size_t	word_count;
-	size_t	idx_i;
-	size_t	idx_j;
-	size_t	start;
-	char	**result;
-
-	word_count = count_word(s, c);
-	res = calloc((word_count + 1) * sizeof(char*));
-	idx_j = 0;
-	while (s[idx_j] != '\0')
-	{
-		while (s[idx_j] == c)
-			++idx_j;
-		if (s[idx_j] == '\0')
-			break ;
-	}
-}
 
 static size_t	count_word(char const *s, char c)
 {
@@ -90,13 +38,55 @@ static size_t	count_word(char const *s, char c)
 	}
 	return (count);
 }
-//int	main(void)
-//{
-//	char	**res;
-//	size_t	idx = 7;
-//
-//	res = ft_split("hello world 42 67 69 911 711", ' ');
-//	while (idx--)
-//		printf("%s\n", *(res++));
-//	return (0);
-//}
+
+static void	free_result(char **result, size_t count)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(result[i]);
+		++i;
+	}
+	free(result);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	size_t	word_count;
+	char	**result;
+	size_t	inner_index;
+	size_t	start_word;
+	size_t	index;
+
+	word_count = count_word(s, c);
+	result = calloc((word_count + 1), sizeof(char *));
+	if (!result)
+		return (NULL);
+	inner_index = 0;
+	index = 0;
+	while (s[inner_index] != '\0')
+	{
+		while (s[inner_index] == c)
+			++inner_index;
+		if (s[inner_index] == '\0')
+			break ;
+		start_word = inner_index;
+		while ((s[inner_index] != '\0') && (s[inner_index] != c))
+			++inner_index;
+		result[index] = malloc(((inner_index - start_word) + 1)
+			* sizeof(char));
+		if (!result[index])
+		{
+			free_result(result, index);
+			return (NULL);
+		}
+		ft_memcpy(result[index], (s + start_word),
+			(inner_index - start_word));
+		result[index][inner_index - start_word] = '\0';
+		++index;
+	}
+	result[index] = NULL;
+	return (result);
+}
