@@ -6,49 +6,65 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 19:31:08 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/11 00:02:07 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/11 20:40:51 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
-static size_t	word_count(char const *s, char c);
-static void		real_split(char const *s, char c, char **buffer);
+static size_t	count_word(char const *s, char c);
 
-// 1. Determine size I should malloc.
-// 2. memset those to '\0'.
-// 3. strlcat those 's' delimitered by 'c' to each segment from (1.).
-// 4. Write 'NULL' to the last element.
+//char	**ft_split(char const *s, char c)
+//{
+//	char		**res;
+//	size_t		word_count;
+//	const char	*ptr_end;
+//	const char	*ptr_begin;
+//	size_t		idx;
+//
+//	idx = 0;
+//	word_count = count_word(s, c);
+//	res = calloc(word_count + 1, sizeof(char *));
+//	ptr_begin = s;
+//	ptr_end = s;
+//	while (*(ptr_begin) != '\0')
+//	{
+//		while ((*(ptr_end) != c) && (*(ptr_end) != '\0'))
+//			++ptr_end;
+//		*(res + idx) = calloc((ptr_end - ptr_begin + 1), sizeof(char));
+//		ft_memcpy(*(res + idx), ptr_begin, ptr_end - ptr_begin);
+//		*(*(res + idx) + (ptr_end - ptr_begin)) = '\0';
+//		++idx;
+//		++ptr_end;
+//		ptr_begin = ptr_end;
+//		if (*(ptr_begin) == '\0')
+//			break ;
+//	}
+//	*(res + word_count) = NULL;
+//	return (res);
+//}
 char	**ft_split(char const *s, char c)
 {
-	char	**res;
+	size_t	word_count;
+	size_t	idx_i;
+	size_t	idx_j;
+	size_t	start;
+	char	**result;
 
-	res = calloc(word_count(s, c) + 1, sizeof(char *));
-	real_split(s, c, res);
-	return (res);
-}
-
-static void	real_split(char const *s, char c, char **buffer)
-{
-	const char	*s_begin;
-	const char	*s_end;
-
-	while (*s != '\0')
+	word_count = count_word(s, c);
+	res = calloc((word_count + 1) * sizeof(char*));
+	idx_j = 0;
+	while (s[idx_j] != '\0')
 	{
-		s_begin = s;
-		s_end = ft_strchr(s_begin, c);
-		if (s_end != NULL)
-		{
-			*(buffer) = ft_memcpy(*buffer, s_begin, (s_end - s_begin + 1));
-			*(*(buffer) + (s_end - s_begin)) = '\0';
-			++buffer;
-			s += s_end - s_begin + 1;
-		}
-		++s;
+		while (s[idx_j] == c)
+			++idx_j;
+		if (s[idx_j] == '\0')
+			break ;
 	}
 }
 
-static size_t	word_count(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	unsigned char	word_entered;
 	size_t			idx;
@@ -74,12 +90,13 @@ static size_t	word_count(char const *s, char c)
 	}
 	return (count);
 }
-#include <stdio.h>
-int	main(void)
-{
-	char	text[] = " and is red. ";
-	char	deli = ' ';
-
-	printf("#word: %zu\n", word_count(text, deli));
-	return (0);
-}
+//int	main(void)
+//{
+//	char	**res;
+//	size_t	idx = 7;
+//
+//	res = ft_split("hello world 42 67 69 911 711", ' ');
+//	while (idx--)
+//		printf("%s\n", *(res++));
+//	return (0);
+//}
