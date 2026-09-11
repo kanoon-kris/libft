@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 19:31:08 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/12 00:19:06 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/12 00:30:09 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(const char *s, char c)
 		while ((s[inner_index] != '\0') && (s[inner_index] != c))
 			++inner_index;
 		result[index] = malloc(((inner_index - start_word) + 1)
-			* sizeof(char));
+				* sizeof(char));
 		if (!result[index])
 		{
 			free_result(result, index);
