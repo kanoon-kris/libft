@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 19:31:08 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/12 01:25:32 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/13 00:12:44 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static char	*manifest_word(char const *s, size_t start_word, size_t len)
 	new_word = malloc(len + 1);
 	if (!new_word)
 		return (NULL);
-	ft_memcpy(new_word, s + start, len);
+	ft_memcpy(new_word, s + start_word, len);
 	new_word[len] = '\0';
 	return (new_word);
 }
@@ -138,7 +138,7 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	if (!fill_words(result, s, c))
 	{
-		free_result(result);
+		free_result(result, word_count);
 		return (NULL);
 	}
 	return (result);
