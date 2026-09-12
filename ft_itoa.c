@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 00:33:32 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/13 02:52:26 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/13 03:00:54 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,13 @@ size_t	count_len(int n)
 char	*ft_itoa(int n)
 {
 	size_t	num_len;
-	size_t	is_negative;
 	char	*result;
 	long	n_copy;
 
 	num_len = count_len(n);
 	is_negative = 0;
 	if (n < 0)
-	{
-		is_negative = 1;
-		n_copy = n;
-		n_copy = -n_copy;
-	}
+		n_copy = -(long)n;
 	else
 		n_copy = n;
 	result = malloc((num_len + 1) * sizeof(char));
@@ -66,7 +61,7 @@ char	*ft_itoa(int n)
 		n_copy = n_copy / 10;
 		--num_len;
 	}
-	if (is_negative)
+	if (n < 0)
 		result[0] = '-';
 	else
 		result[0] = (unsigned char)(n_copy) | '0';
