@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 03:02:10 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/13 03:26:15 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/13 03:28:00 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	index;;
+	size_t	index;
 	char	*result;
 	size_t	len;
 
