@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 05:18:21 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/14 03:41:05 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/15 04:28:34 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(*lst);
 		*lst = next_node;
 	}
+	*lst = NULL;
 }
