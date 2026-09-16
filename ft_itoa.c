@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 00:33:32 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/13 03:00:54 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:28:40 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ char	*ft_itoa(int n)
 	long	n_copy;
 
 	num_len = count_len(n);
-	is_negative = 0;
 	if (n < 0)
 		n_copy = -(long)n;
 	else
