@@ -21,6 +21,17 @@ Functions for manipulating singly linked lists.
 - `make re`: recompile the whole project, equivalent to `make fclean` + `make all`.
 
 # Resources
-
+## References
 - 42 Students at 42 Bangkok campus
 - Google Search Engine
+- Linux man page
+- Claude (Anthropic), for debugging and code review
+
+## AI Usage
+Claude (Anthropic) was used during this project for:
+- Debugging compiler errors and explaining their cause
+- Identifying logic errors, memory leaks, and undefined behavior (e.g. via Valgrind output)
+- Reviewing code for correctness against the subject's requirements and 42 norm
+- Explaining C concepts (pointer arithmetic, `size_t` vs pointer types, function pointers)
+
+All function implementations were written and typed by the author. AI was used as a debugging and review aid, not to generate the initial implementations.
