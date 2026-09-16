@@ -26,6 +26,8 @@ Functions for manipulating singly linked lists.
 - Google Search Engine
 - Linux man page
 - Claude (Anthropic), for debugging and code review
+- `libftTester (v19.1)` by Tripouille, for testing
+- `bro42 (v1.1.2)` by wxsonz, for preliminary testing
 
 ## AI Usage
 Claude (Anthropic) was used during this project for:
