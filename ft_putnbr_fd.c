@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 03:43:29 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/13 03:48:14 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/16 18:58:05 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ void	ft_putnbr_fd(int n, int fd)
 
 	result = ft_itoa(n);
 	write(fd, result, ft_strlen(result));
+	free(result);
 }
