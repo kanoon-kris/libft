@@ -6,16 +6,12 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 20:44:23 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/08 03:41:03 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:57:42 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-//char	*ft_strnstr(const char *big, const char *little, size_t len)
-//{
-//}
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	idx;
@@ -25,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)(big));
 	idx_inner = 0;
 	idx = 0;
-	while (idx < len)
+	while ((*(big + idx) != '\0') && (idx < len))
 	{
 		idx_inner = 0;
 		while ((*(big + idx + idx_inner) == *(little + idx_inner))
@@ -38,9 +34,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+//#include <stdio.h>
+//#include <string.h>
 //int	main(void)
 //{
-//	printf("START\n");
-//	printf("%s\n", ft_strnstr("Hellow World", "World", 10));
+//	printf("%s\n", ft_strnstr("Hellow World", "W", 1));
+//	printf("%s\n", ft_strnstr(NULL, NULL, 1));
+//	printf("og: %s\n", strnstr(NULL, NULL, 1));
 //	return (0);
 //}
