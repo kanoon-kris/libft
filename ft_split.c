@@ -6,7 +6,7 @@
 /*   By: kboonkos <kboonkos@student.42bangkok.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 19:31:08 by kboonkos          #+#    #+#             */
-/*   Updated: 2026/09/13 00:12:44 by kboonkos         ###   ########.fr       */
+/*   Updated: 2026/09/18 20:48:19 by kboonkos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ char	**ft_split(const char *s, char c)
 	size_t	word_count;
 
 	word_count = count_word(s, c);
-	result = calloc((word_count + 1), sizeof(char *));
+	result = ft_calloc((word_count + 1), sizeof(char *));
 	if (!result)
 		return (NULL);
 	if (!fill_words(result, s, c))
